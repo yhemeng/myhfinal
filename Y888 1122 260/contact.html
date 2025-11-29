@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<link rel="stylesheet" href="./css/contact.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson-client@3"></script>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">MengYingHong</a>
+      <ul class="nav-links">
+        <li><a href="index.html">PERSONAL EXPERIENCE</a></li>
+        <li><a href="portfolio.html">ARTWORKS</a></li>
+        <li><a href="contact.html">WARDS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="profile-container" style="padding-top: 120px;">
+    <h1 class="section-title">MY SOCIAL MEDIA ACCOUNTS</h1>
+
+    <h2 class="section-title" style="font-size: 1.5rem;">data</h2>
+
+    <div class="platform-grid">
+      <div class="platform-card">
+        <div class="platform-icon">📺</div>
+        <div class="platform-name">BILIBILI</div>
+        <div class="platform-data" id="bilibili-fans">438.8</div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-icon">🧣</div>
+        <div class="platform-name">red note</div>
+        <div class="platform-data" id="weibo-fans">253</div>
+      </div>
+
+      <div class="platform-card">
+        <div class="platform-icon">🎵</div>
+        <div class="platform-name">tiktok</div>
+        <div class="platform-data" id="douyin-fans">353</div>
+      </div>
+
+      <!-- <div class="platform-card">
+        <div class="platform-icon">📸</div>
+        <div class="platform-name">Instagram</div>
+        <div class="platform-data" id="ins-fans">85</div>
+      </div> -->
+    </div>
+
+    <div class="award-section">
+      <h2 class="section-title" style="font-size: 1.5rem; margin-top: 50px;">Rewards</h2>
+
+      <div class="award-grid">
+        <div class="award-card">
+          <div class="award-year">2019</div>
+          <div class="award-name">BILIBILI POWER UP AWARD 2019 top 100 content creators</div>
+          <p class="award-desc">in 2018 with a creative adaptation of the "Bad Guy" music video, which accumulating over 8 million views. this video also help me win the yearly top 100 creators in bilibili. 
+          </p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2022</div>
+          <div class="award-name">NEW MISSION</div>
+          <p class="award-desc">During the pandemic, I served as a volunteer community coordinator ("楼长"), 
+           i resonated widely across society. The initiative gained coverage from mainstream media, including CCTV News.<p> This experience taught me what is the responsibilty as a content creator and also highlighted the positive social impact of my creative work and had a significant impact in my life.</p>
+        </div>
+
+        <div class="award-card">
+          <div class="award-year">2023</div>
+          <div class="award-name">WEIBO video award</div>
+          <p class="award-desc">I was named Weibo's Creator of the Year in 2023. That year, 
+            I experimented with a wide range of video styles—from daily vlogs to documentaries—striving to learn new skills.
+             Meanwhile, I continued to grow in my commercialization journey. Through consistent efforts, my total followers across platforms surpassed 10 million, and I also participated in various public welfare initiatives.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <h2 class="contact-title">Thank you for watching</h2>
+      <p style="margin-bottom: 20px;">welcome to join us</p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">📧</span>
+          <span>email：contact@upmain.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📱</span>
+          <span>wechat：upmain_assistant</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🌐</span>
+          <span>follow me on：https://www.instagram.com/lahong_12/</span>
+        </div>
+      </div>
+    </div>
+    <!-- 1 -->
+    <div style="background-color: #fff;">
+      <section id="vis-treemap" style="text-align: center;width: auto;margin-left: 100px;">
+        <div id="chat-box-container">
+          <div id="chat-box-header">
+          </div>
+          <div id="chat-box-body">
+            <button id="animate-button" style="display: none;"></button>
+            <button id="fixed-button" style="display: none;"></button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- 2 -->
+
+    <div style="background-color: #fff;margin: 10px 0;">
+      <section id="vis-dot" style="text-align: center;margin: auto;">
+      </section>
+    </div>
+    <!-- 3 -->
+
+    <div style="background-color: #fff;">
+      <section id="vis-nav" style="text-align: center;margin: auto;">
+      </section>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>navigation</h3>
+        <ul>
+          <li><a href="#">frontpage</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">service</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>contact</h3>
+        <ul>
+          <li>email：contact@example.com</li>
+          <li>tel：+86 123 4567 8910</li>
+          <li>address：your dream</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>关注我们</h3>
+        <ul>
+          <li><a href="#">bilibili</a></li>
+          <li><a href="#">weibo</a></li>
+          <li><a href="#">rednote</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2025 版权所有 | 京ICP备12345678号
+    </div>
+  </footer>
+
+  <script src="./js/contact.js"></script>
+</body>
+
+<script src="./js/code.js"></script>
+<script src="./js/scatterplot.js"></script>
+<script src="./js/linechart.js"></script>
+<script src="./js/tree.js"></script>
+<script src="./js/node-link diagram.js"></script>
+<script src="./js/matrix.js"></script>
+<script src="./js/map.js"></script>
+<script src="./js/grid.js"></script>
+<script src="./js/nav.js"></script>
+
+</html>
